@@ -1,5 +1,16 @@
 # streamdown
 
+## 2.8.0
+
+### Minor Changes
+
+- 8b0ca9f: feat: add `codeBlockRawLanguages` option to render selected code fence languages (e.g. ASCII / box-drawing diagrams) verbatim as monospace text without syntax highlighting
+
+### Patch Changes
+
+- a9fb2a2: Keep blank lines inside fenced code blocks in custom tags instead of rendering `<!---->` placeholders in the code.
+- 8aaf182: fix: use logical Tailwind classes (`ps-*`, `border-s-*`, `text-start`, `start-*`, `end-*`, `ms-*`) instead of physical left/right classes so layout mirrors in RTL text. `cn` now treats logical and physical utilities on the same axis as conflicting, so a consumer `className="pl-8"` still overrides the built-in padding. The code block keeps physical classes because it is pinned `dir="ltr"`.
+
 ## 2.7.1
 
 ### Patch Changes
